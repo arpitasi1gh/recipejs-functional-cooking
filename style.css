@@ -75,3 +75,17 @@ main {
     background: #f8d7da;
     color: #721c24;
 }
+
+.filterBtns, .sortBtns {
+    text-align: center;
+    margin-top: 7vw;
+    font-weight: bold;
+}
+.btn {
+    margin: 1.5vw;
+    padding: 2vw;
+    font-weight: bold;
+    color: white;
+    background: blue;
+    border-radius: 12px;
+}
