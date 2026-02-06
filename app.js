@@ -1,12 +1,12 @@
 const recipes = [
-    {id:1, title: "A_recipe_1", time: 45, difficulty: "medium", description: "It is a traditional North Indian Food of Punjab. It requires ingredients X,Y,Z and salt for taste.", category: "curry"},
-    {id:2, title: "D_recipe_2", time: 15, difficulty: "easy", description: "It is a general North Indian Food of Ladakh. It requires ingredients X,Y,Z and salt for taste.", category: "salad"},
-    {id:3, title: "Y_recipe_3", time: 40, difficulty: "hard", description: "It is a general West Indian Food of Rajasthan. It requires ingredients X,Y,Z and salt for taste.", category: "curry"},
-    {id:4, title: "B_recipe_4", time: 35, difficulty: "medium", description: "It is a general Italian food of Italy. It requires ingredients X,Y,Z and salt for taste.", category: "pasta"},
-    {id:5, title: "E_recipe_5", time: 15, difficulty: "easy", description: "It is a general North Indian Food of Uttar Pradesh. It requires ingredients X,Y,Z and salt for taste.", category: "pasta"},
-    {id:6, title: "X_recipe_6", time: 45, difficulty: "hard", description: "It is a traditional South Indian Food of Maharashtra. It requires ingredients X,Y,Z and salt for taste.", category: "curry"},
-    {id:7, title: "Z_recipe_7", time: 15, difficulty: "medium", description: "It is a general East Indian Food of Assam. It requires ingredients X,Y,Z and salt for taste.", category: "salad"},
-    {id:8, title: "C_recipe_8", time: 35, difficulty: "hard", description: "It is a general West Indian Food of Gujarat. It requires ingredients X,Y,Z and salt for taste.", category: "pasta"}
+    {id:1, title: "A_recipe_1", time: 45, difficulty: "medium", description: "It is a traditional North Indian Food of Punjab.", category: "curry", steps: "Step 1: Add 1 teaspoon of xyz in abc bowl with water.\nStep 2: Mix well and cook lightly on the stove for qpr minutes.\nStep 3: Ready to serve!", ingredients: "1. Water\n2. Salt\n3. Spices"},
+    {id:2, title: "D_recipe_2", time: 15, difficulty: "easy", description: "It is a general North Indian Food of Ladakh.", category: "salad", steps: "Step 1: Add 1 teaspoon of xyz in abc bowl with water.\nStep 2: Mix well and cook lightly on the stove for qpr minutes.\nStep 3: Ready to serve!", ingredients: "1. Water\n2. Salt\n3. Spices"},
+    {id:3, title: "Y_recipe_3", time: 40, difficulty: "hard", description: "It is a general West Indian Food of Rajasthan.", category: "curry", steps: "Step 1: Add 1 teaspoon of xyz in abc bowl with water.\nStep 2: Mix well and cook lightly on the stove for qpr minutes.\nStep 3: Ready to serve!", ingredients: "1. Water\n2. Salt\n3. Spices"},
+    {id:4, title: "B_recipe_4", time: 35, difficulty: "medium", description: "It is a general Italian food of Italy.", category: "pasta", steps: "Step 1: Add 1 teaspoon of xyz in abc bowl with water.\nStep 2: Mix well and cook lightly on the stove for qpr minutes.\nStep 3: Ready to serve!", ingredients: "1. Water\n2. Salt\n3. Spices"},
+    {id:5, title: "E_recipe_5", time: 15, difficulty: "easy", description: "It is a general North Indian Food of Uttar Pradesh.", category: "pasta", steps: "Step 1: Add 1 teaspoon of xyz in abc bowl with water.\nStep 2: Mix well and cook lightly on the stove for qpr minutes.\nStep 3: Ready to serve!", ingredients: "1. Water\n2. Salt\n3. Spices"},
+    {id:6, title: "X_recipe_6", time: 45, difficulty: "hard", description: "It is a traditional South Indian Food of Maharashtra.", category: "curry", steps: "Step 1: Add 1 teaspoon of xyz in abc bowl with water.\nStep 2: Mix well and cook lightly on the stove for qpr minutes.\nStep 3: Ready to serve!", ingredients: "1. Water\n2. Salt\n3. Spices"},
+    {id:7, title: "Z_recipe_7", time: 15, difficulty: "medium", description: "It is a general East Indian Food of Assam.", category: "salad", steps: "Step 1: Add 1 teaspoon of xyz in abc bowl with water.\nStep 2: Mix well and cook lightly on the stove for qpr minutes.\nStep 3: Ready to serve!", ingredients: "1. Water\n2. Salt\n3. Spices"},
+    {id:8, title: "C_recipe_8", time: 35, difficulty: "hard", description: "It is a general West Indian Food of Gujarat.", category: "pasta", steps: "Step 1: Add 1 teaspoon of xyz in abc bowl with water.\nStep 2: Mix well and cook lightly on the stove for qpr minutes.\nStep 3: Ready to serve!", ingredients: "1. Water\n2. Salt\n3. Spices"}
 ]
 
 let recipeContainer = document.querySelector("#recipe-container");
@@ -18,7 +18,10 @@ const createRecipeCard = (recipe) => {
     <div class="recipe-meta">
     <span>${recipe.time}min</span>
     <span class="difficulty ${recipe.difficulty}">${recipe.difficulty}</span>
-    <p>${recipe.description}</p>
+    <p>${recipe.description}</p><br>
+    <button class="steps show btn">Show Steps</button>
+    <button class="ingredients show btn">Show Ingredients</button>
+    <pre class="extra-content" style="display:none;"></pre>
     </div>
     </div>
     `
@@ -99,4 +102,23 @@ else if (e.target.classList.contains("time")) {
 
   renderRecipes(sortedByTimeDesc);
 }
+});
+
+recipeContainer.addEventListener("click", (e) => {
+    if (!e.target.classList.contains("show")) return;
+
+    const card = e.target.closest(".recipe-card");
+    const recipeId = Number(card.dataset.id);
+    const recipe = recipes.find(r => r.id === recipeId);
+    const extraContent = card.querySelector(".extra-content");
+
+    if (e.target.classList.contains("steps")) {
+        extraContent.textContent = recipe.steps;
+    }
+
+    if (e.target.classList.contains("ingredients")) {
+        extraContent.textContent = recipe.ingredients;
+    }
+
+    extraContent.style.display = "block";
 });
