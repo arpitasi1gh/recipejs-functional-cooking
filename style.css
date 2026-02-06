@@ -89,3 +89,12 @@ main {
     background: blue;
     border-radius: 12px;
 }
+.extra-content {
+    text-wrap: wrap;
+}
+#searchInput {
+    width: 65vw;
+    height: 7vw;
+    text-align: center;
+    overflow: scroll;
+}
