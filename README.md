@@ -21,13 +21,12 @@ This project demonstrates how scalable, maintainable applications can be built w
 ---
 
 ## 📂 Project Structure
-recipejs-functional-cooking/
-│
-├── index.html
-├── style.css
-├── app.js
-├── screenshots/
-└── README.md
+- recipejs-functional-cooking/
+- │
+- ├── index.html
+- ├── style.css
+- ├── app.js
+- └── README.md
 
 ---
 
