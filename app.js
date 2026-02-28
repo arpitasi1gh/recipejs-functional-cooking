@@ -40,6 +40,14 @@ function debounce(fn, delay) {
 const recipeContainer = document.querySelector("#recipe-container");
 
 /***********************
+ * RECIPE COUNTER UI
+ ***********************/
+const recipeCounter = document.createElement("div");
+recipeCounter.id = "recipe-counter";
+recipeCounter.style.margin = "10px 0";
+document.querySelector("main").insertBefore(recipeCounter, recipeContainer);
+
+/***********************
  * RENDERING
  ***********************/
 function createRecipeCard(recipe) {
@@ -67,7 +75,11 @@ function createRecipeCard(recipe) {
   `;
 }
 
+/***********************
+ * RENDER RECIPES + COUNTER
+ ***********************/
 function renderRecipes(list) {
+  recipeCounter.textContent = `Showing ${list.length} of ${recipes.length} recipes`;
   if (list.length === 0) {
     recipeContainer.innerHTML = "<p>No recipes found 🍽️</p>";
     return;
@@ -87,6 +99,7 @@ filterBtns.innerHTML = `
   <button class="btn medium">Medium</button>
   <button class="btn hard">Hard</button>
   <button class="btn quick">Quick (&lt;30min)</button>
+  <button class="btn favorites">❤️ Favorites</button>
 `;
 document.body.appendChild(filterBtns);
 
@@ -116,6 +129,11 @@ filterBtns.addEventListener("click", (e) => {
   } else if (e.target.classList.contains("quick")) {
     currentRecipes = recipes.filter(r => r.time < 30);
   }
+    else if (e.target.classList.contains("favorites")) {
+    currentRecipes = recipes.filter(recipe =>
+    favoriteIds.includes(recipe.id)
+  );
+}
 
   renderRecipes(currentRecipes);
 });

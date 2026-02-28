@@ -33,11 +33,11 @@ main {
     justify-content: center;
 }
 .recipe-card {
-    background: white;
+    background: rgb(195, 203, 255);
     border-radius: 12px;
-    box-shadow: 0.5vw 0.5vw 0.5vw black;
+    box-shadow: 0 0 0.15vw black;
     padding: 1.5rem;
-    width: 300px;
+    width: 400px;
     transition: 1.5s;
 }
 .recipe-card:hover {
@@ -45,7 +45,7 @@ main {
     box-shadow: 0.5vw 0.5vw 0.5vw black;
 }
 .recipe-card h3 {
-    color: maroon;
+    color: rgb(55, 0, 114);
     font-size: 2vw;
 }
 .recipe-meta {
@@ -53,14 +53,14 @@ main {
     gap: 1.5rem;
 }
 .recipe-card p {
-    color: blue;
+    color: rgb(166, 0, 255);
     line-height: 5vw;
 }
 
 .difficulty {
     padding: 1vw;
     border-radius: 12px;
-    font-size: 1.5vw;
+    font-size: 1.15vw;
     font-weight: bold;
 }
 .difficulty.easy {
@@ -83,18 +83,24 @@ main {
 }
 .btn {
     margin: 1.5vw;
-    padding: 2vw;
+    padding: 1vw;
     font-weight: bold;
     color: white;
-    background: blue;
+    background: rgb(100, 1, 187);
     border-radius: 12px;
 }
 .extra-content {
     text-wrap: wrap;
 }
 #searchInput {
-    width: 65vw;
-    height: 7vw;
+    width: 61vw;
+    height: 3.25vw;
     text-align: center;
     overflow: scroll;
+}
+.fav-btn {
+    font-size: 2vw;
+    border-radius: 12px;
+    padding: 0.25vw 1vw 0.25vw 1vw;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
