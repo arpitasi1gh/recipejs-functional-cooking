@@ -1,57 +1,187 @@
-# recipejs-functional-cooking<br>
-A functional programming approach to a recipe companion app<br><br>
+<img width="1470" height="834" alt="Screenshot 2026-02-28 at 11 09 37 PM" src="https://github.com/user-attachments/assets/b17c21e1-5cf2-4a2d-9fb1-8549a199eb97" /># 🍳 RecipeJS – Functional Cooking
 
-Step A1: Set Up Your GitHub Repository<br>
-i. Go to GitHub and sign in<br>
-ii. Create a new repository:<br>
-    · Click the "+" icon (top right) → "New repository"<br>
-    · Repository name: recipejs-functional-cooking<br>
-    · Description: "A functional programming approach to a recipe companion app"<br>
-    · Visibility: Public (important for submission)<br>
-    · Check "Add a README file"<br>
-    · Click "Create repository"<br>
-iii. Clone the repository to your local machine:<br>
-    · git clone https://github.com/arpitasi1gh/recipejs-functional-cooking.git<br>
-    · cd recipejs-functional-cooking<br><br>
+A recipe companion app built using **Vanilla JavaScript** with a strong focus on **Functional Programming principles**, clean architecture, and interactive UI features.
 
-Step A2: Create Project Files<br>
-i. Create three files in your project folder:<br>
-    · recipejs-functional-cooking/<br>
-      ├── index.html<br>
-      ├── style.css<br>
-      └── app.js<br>
-ii. Build the HTML Structure (index.html)<br>
-iii. Style with CSS (style.css)<br>
-iv. JavaScript Implementation (app.js)<br><br>
+This project demonstrates how scalable, maintainable applications can be built without frameworks by applying pure functions, modular patterns, and state-driven rendering.
 
-Step B1: Add Features<br>
-1. Add Filter Buttons that show and update the recipe list immediately when clicked.<br>
-   · All, Easy, Medium, Hard, Quick (Under 30 minutes)<br>
-2. Add Sorting Buttons for: Name (A–Z), Time (Fastest First)<br>
-3. Follow Functional Programming<br>
-4. Create a Pull Request<br><br>
+---
 
-Step B1: Add Features<br>
-1. Expandable Recipe Cards<br>
-    · Add a “Show Steps” button on each recipe card<br>
-    · Add a “Show Ingredients” button<br>
-2. Update recipe objects to include: steps (array), ingredients (array)<br>
-3. Recursive Rendering of Steps<br>
-4. IIFE / Module Structure<br>
-5. Event Handling<br>
-6. Preserve Existing Features<br><br>
+## 🚀 Live Demo
 
-Step B1: Add Features<br>
-1. Real-Time Search<br>
-    · Add a search bar to search recipes by title and/or ingredients.<br>
-    · Implement debouncing so search does not run on every keystroke.<br>
-2. Favorites Feature<br>
-    · Add a favorite (heart) button to each recipe card.<br>
-    · Allow users to mark and unmark recipes as favorites.<br>
-    · Persist favorite recipes using localStorage so they remain after refresh.<br>
-    · Favorites-Only Filter<br>
-    · Add an option to view only favorited recipes.<br>
-3. Recipe Counter<br>
-· Display how many recipes are currently shown (e.g., “Showing 3 of 8 recipes”).<br>
-· Ensure it updates correctly when search, filters, or favorites are applied.<br>
-· Code Cleanup & Final Polish
+🔗 **Deployed Link:**  
+👉 https://recipejs-functional-cooking.netlify.app/
+
+---
+
+## 📸 Screenshots
+
+<img width="1470" height="832" alt="Screenshot 2026-02-28 at 10 57 23 PM" src="https://github.com/user-attachments/assets/27633e08-d086-4b36-bbfe-65bf48b4461e" />
+<img width="1470" height="838" alt="Screenshot 2026-02-28 at 10 57 34 PM" src="https://github.com/user-attachments/assets/3d33106f-5473-4054-bfad-fcdd9c66e907" />
+<img width="1470" height="834" alt="Screenshot 2026-02-28 at 11 09 37 PM" src="https://github.com/user-attachments/assets/7eade091-0ef6-4ad3-a4d4-72f26475ce15" />
+
+---
+
+## 📂 Project Structure
+recipejs-functional-cooking/
+│
+├── index.html
+├── style.css
+├── app.js
+├── screenshots/
+└── README.md
+
+---
+
+## 🧠 Core Concepts Applied
+
+- Functional Programming approach
+- Pure Functions
+- Immutability patterns
+- Higher-order functions
+- Array methods (`map`, `filter`, `reduce`)
+- IIFE / Module structure
+- Debouncing
+- Event Delegation
+- State-driven rendering
+- LocalStorage persistence
+
+---
+
+## ✨ Features
+
+### 🔍 1. Real-Time Search (With Debounce)
+
+- Search by recipe title
+- Search by ingredients
+- Debounced input for optimized performance
+
+---
+
+### 🧩 2. Filtering
+
+Filter recipes by:
+
+- All
+- Easy
+- Medium
+- Hard
+- Quick (Under 30 minutes)
+- Favorites Only
+
+Filters update instantly without page reload.
+
+---
+
+### 🔄 3. Sorting
+
+Sort recipes dynamically by:
+
+- Name (A–Z)
+- Cooking Time (Fastest First)
+
+---
+
+### 📋 4. Expandable Recipe Cards
+
+Each card includes:
+
+- “Show Ingredients”
+- “Show Steps”
+- Recursive rendering of step lists
+- Smooth dynamic updates
+
+---
+
+### ❤️ 5. Favorites System
+
+- Mark / unmark recipes as favorite
+- Stored in `localStorage`
+- Favorites persist after refresh
+- Dedicated Favorites filter
+
+---
+
+### 📊 6. Dynamic Recipe Counter
+
+Displays real-time count:
+Showing 3 of 8 recipes
+
+Updates automatically when:
+
+- Search changes
+- Filters apply
+- Sorting changes
+- Favorites toggle
+
+---
+
+## 🛠 Development Breakdown
+
+### Step A – Project Setup
+
+- Created GitHub repository
+- Designed base HTML structure
+- Styled UI using CSS
+- Implemented core JavaScript logic using functional programming principles
+
+### Step B – Feature Expansion
+
+- Implemented filtering & sorting system
+- Built expandable recipe cards
+- Applied recursive rendering for nested steps
+- Used IIFE module pattern for scoped architecture
+- Added real-time search with debouncing
+- Implemented favorites system with localStorage persistence
+- Added dynamic recipe counter
+- Refactored and cleaned code for maintainability
+
+---
+
+## 🎯 Challenges Faced
+
+- Maintaining immutability while updating UI state
+- Preventing unnecessary re-renders
+- Implementing efficient debouncing logic
+- Managing multiple filters and sorting simultaneously
+- Persisting UI state using localStorage
+
+---
+
+## 🚀 Future Improvements
+
+- Add animations & transitions
+- Add category tags
+- Add recipe creation form
+- Add dark mode
+- Convert to React / Next.js version
+- Connect to a backend API
+
+---
+
+## 📚 Learning Outcomes
+
+Through this project, I strengthened my understanding of:
+
+- Functional programming in frontend development
+- State management without frameworks
+- Writing scalable vanilla JavaScript
+- Clean modular architecture
+- Real-world UI feature integration
+
+---
+
+## 👩‍💻 Author
+
+**Arpita Singh**
+
+---
+
+## 📌 Pull Request Workflow
+
+All features were developed incrementally and merged via Pull Requests to simulate a collaborative development workflow.
+
+---
+
+## 📜 License
+
+This project is built for educational purposes.
