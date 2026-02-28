@@ -9,7 +9,7 @@ This project demonstrates how scalable, maintainable applications can be built w
 ## 🚀 Live Demo
 
 🔗 **Deployed Link:**  
-👉 https://recipejs-functional-cooking.vercel.app
+👉 https://recipejs-functional-cooking-three.vercel.app
 
 ---
 
