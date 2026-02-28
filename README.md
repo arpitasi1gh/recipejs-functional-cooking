@@ -1,4 +1,4 @@
-<img width="1470" height="834" alt="Screenshot 2026-02-28 at 11 09 37 PM" src="https://github.com/user-attachments/assets/b17c21e1-5cf2-4a2d-9fb1-8549a199eb97" /># 🍳 RecipeJS – Functional Cooking
+# 🍳 RecipeJS – Functional Cooking
 
 A recipe companion app built using **Vanilla JavaScript** with a strong focus on **Functional Programming principles**, clean architecture, and interactive UI features.
 
