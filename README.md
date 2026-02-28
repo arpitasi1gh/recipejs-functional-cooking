@@ -16,8 +16,7 @@ This project demonstrates how scalable, maintainable applications can be built w
 ## 📸 Screenshots
 
 <img width="1470" height="832" alt="Screenshot 2026-02-28 at 10 57 23 PM" src="https://github.com/user-attachments/assets/27633e08-d086-4b36-bbfe-65bf48b4461e" />
-<img width="1470" height="838" alt="Screenshot 2026-02-28 at 10 57 34 PM" src="https://github.com/user-attachments/assets/3d33106f-5473-4054-bfad-fcdd9c66e907" />
-<img width="1470" height="834" alt="Screenshot 2026-02-28 at 11 09 37 PM" src="https://github.com/user-attachments/assets/7eade091-0ef6-4ad3-a4d4-72f26475ce15" />
+<img width="1371" height="836" alt="Screenshot 2026-02-28 at 11 13 57 PM" src="https://github.com/user-attachments/assets/66b3db75-6fd8-471b-b0da-deb9cdab7a07" />
 
 ---
 
